@@ -18,6 +18,16 @@ resource "github_repository" "repo2" {
   gitignore_template = "Node"
 }
 
+#? Create repository (repo3)
+resource "github_repository" "repo3" {
+  name               = "repo3-by-terraform"
+  description        = "Repo managed by terraform"
+  visibility         = "private"
+  auto_init          = true
+  license_template   = "mit"
+  gitignore_template = "Node"
+}
+
 #TODO: Commands to create a new repository
 #? First create a personal access token and add it in tfvars file
 #? terraform init (to initialize the providers and plugins)
